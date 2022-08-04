@@ -1,0 +1,31 @@
+.logo {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 12px;
+  }
+  @media screen and (min-width: $tablet) {
+    gap: 10px;
+  }
+
+  & .logo__icon {
+    width: 40px;
+    height: 35px;
+    fill: var(--header-logo);
+  }
+  & .logo__title {
+    font-size: 32px;
+    line-height: 1.32;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 35px;
+      line-height: 1.21;
+    }
+  }
+  & .logo__title-primary {
+    color: var(--header-logo);
+  }
+  & .logo__title-secondary {
+    color: var(--primary-white-color);
+  }
+}
