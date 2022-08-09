@@ -1,8 +1,7 @@
-.solutions {
-  // display: flex;
-  border: 1px solid red;
+.blog {
   @media screen and (min-width: $tablet) {
     display: flex;
+    flex-direction: row-reverse;
   }
   @media screen and(min-width:$desktop) {
     max-width: 1360px;
@@ -18,15 +17,15 @@
   }
 
   &__container {
-    background-color: var(--accent-color);
-    padding: 40px 40px 40px 30px;
+    background-color: var(--blog-bgc);
+    padding: 40px 40px 40px 20px;
 
     @media screen and (min-width: $tablet) {
       padding: 40px 53px 40px 32px;
     }
 
     @media screen and (min-width: $desktop) {
-      padding: 80px 64px 80px 20px;
+      padding: 80px 56px 80px 28px;
     }
   }
 
