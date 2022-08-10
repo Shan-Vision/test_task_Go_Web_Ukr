@@ -1,0 +1,38 @@
+<section id="contacts" class="contact container">
+  <div class="contact__thumb">
+    <picture>
+      <source
+        srcset="./images/home/contact.jpg 1x, ./images/home/contact@2x.jpg 2x"
+        type="image/jpg"
+      />
+      <source
+        srcset="./images/home/contact.webp 1x, ./images/home/contact@2x.webp 2x"
+        type="image/webp"
+      />
+      <img
+        src="./images/home/contact.jpg"
+        alt="Contact"
+        class="contact__image"
+      />
+    </picture>
+  </div>
+  <div class="contact__box">
+    <h2 class="contact__title">Request Callback</h2>
+    <form action="" class="contact__form">
+      <input
+        type="text"
+        placeholder="Enter your name"
+        id="name"
+        required
+        class="contact__input"
+      />
+      <input
+        type="email"
+        placeholder="Enter email*"
+        required
+        class="contact__input"
+      />
+      <button class="contact__button">Send</button>
+    </form>
+  </div>
+</section>

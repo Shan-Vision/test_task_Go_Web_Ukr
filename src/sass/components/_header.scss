@@ -13,12 +13,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  max-width: 320px;
   @media screen and (min-width: $tablet) {
     padding-left: 32px;
     padding-right: 32px;
     flex-direction: row;
     justify-content: space-between;
+    max-width: 768px;
   }
   @media screen and (min-width: $desktop) {
     max-width: 1360px;
@@ -26,6 +27,6 @@
 }
 .opacity-by-scroll {
   opacity: 0;
-visibility: hidden;
+  visibility: hidden;
   pointer-events: none;
 }

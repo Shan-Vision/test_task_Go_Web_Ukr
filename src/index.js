@@ -32,24 +32,24 @@ view.onscroll = () => {
 
 // ** scroll by anchor approach
 
-// let anchorlinks = document.querySelectorAll('a');
+let anchorLinks = document.querySelectorAll('[data-anchor]');
 
-// for (let item of anchorlinks) {
-//   item.addEventListener('click', e => {
-//     e.preventDefault();
+for (let item of anchorLinks) {
+  item.addEventListener('click', e => {
+    e.preventDefault();
 
-//     let hashval = item.getAttribute('href');
-//     let target = document.querySelector(hashval);
-//     if (!target.id) {
-//       return;
-//     }
-//     target.scrollIntoView({
-//       behavior: 'smooth',
-//       block: 'start',
-//     });
-//     history.pushState(null, null, hashval);
-//   });
-// }
+    let hashval = item.getAttribute('href');
+    let target = document.querySelector(hashval);
+    if (!target.id) {
+      return;
+    }
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+    history.pushState(null, null, hashval);
+  });
+}
 
 // **  SimpleLightbox images
 let lightBox = new simpleLightbox('.gallery a', {
@@ -61,5 +61,7 @@ let lightBox = new simpleLightbox('.gallery a', {
   captionDelay: 250,
   showCounter: false,
   disableScroll: false,
+  widthRatio: 1,
+  heightRatio: 1,
   //   overlayOpacity: 1,
 });

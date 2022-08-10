@@ -1,3 +1,6 @@
+.team__social {
+  display: none;
+}
 .team {
   padding: 40px 20px;
 
@@ -57,7 +60,7 @@
     font-size: 16px;
     line-height: 1.6;
 
-    color: var(--cases-text-color);
+    color: var(--team-text-color);
 
     @media screen and (max-width: 767px) {
       width: 207px;
@@ -68,9 +71,6 @@
       font-size: 18px;
       line-height: 1.56;
     }
-  }
-  .social__box {
-    display: none;
   }
 
   &__list {
@@ -92,16 +92,14 @@
   }
   &__item {
     position: relative;
-    width: 280px;
+    max-width: 280px;
     transform: scale(1);
 
-    @media screen and(min-width:$tablet) {
-      width: 223px;
-      height: 148px;
+    @media screen and (min-width: $tablet) {
+      max-width: 223px;
     }
-    @media screen and(min-width:$desktop) {
-      width: 421px;
-      height: 282px;
+    @media screen and (min-width: $desktop) {
+      max-width: 421px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -113,7 +111,7 @@
         transition-property: transform;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        .social__box {
+        .team__social {
           position: absolute;
           top: 0;
           left: 0;
@@ -129,24 +127,31 @@
             rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.6)
           );
-          color: var(--primary-white-color);
+          color: var(--team-icons-color);
         }
-        .social__icons {
+        .team__icons {
           width: 40px;
           height: 35px;
           fill: currentColor;
+          opacity: 0.8;
         }
       }
     }
   }
+
   &__image {
     margin-bottom: 16px;
+    object-fit: cover;
 
     @media screen and (min-width: $tablet) {
       margin-bottom: 14px;
+      width: 223px;
+      height: 148px;
     }
     @media screen and (min-width: $desktop) {
       margin-bottom: 20px;
+      width: 421px;
+      height: 282px;
     }
   }
   &__name {

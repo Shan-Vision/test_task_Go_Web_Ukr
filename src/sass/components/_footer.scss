@@ -1,0 +1,39 @@
+.footer {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--footer-bgc);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+    gap: 6px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1360px;
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    color: var(--footer-icons-color);
+  }
+
+  &__icons {
+    fill: currentColor;
+    &:hover {
+      fill: var(--footer-icons-hover-color);
+    }
+  }
+
+  &__caption {
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: var(--footer-text-color);
+  }
+}

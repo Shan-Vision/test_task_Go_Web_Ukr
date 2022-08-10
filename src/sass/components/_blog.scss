@@ -1,5 +1,7 @@
 .blog {
+  max-width: 320px;
   @media screen and (min-width: $tablet) {
+    max-width: 768px;
     display: flex;
     flex-direction: row-reverse;
   }
@@ -10,9 +12,10 @@
     @media screen and(min-width: $tablet) {
       height: 100%;
       object-fit: cover;
+      max-width: 368px;
     }
     @media screen and (min-width: $desktop) {
-      min-width: 670px;
+      max-width: 670px;
     }
   }
 
@@ -34,7 +37,7 @@
 
     font-size: 18px;
     line-height: 1.66;
-    color: var(--primary-white-color);
+    color: var(--blog-text-color);
 
     @media screen and (min-width: $tablet) {
       font-size: 20px;
@@ -48,7 +51,7 @@
     font-weight: 300;
     font-size: 38px;
     line-height: 1.26;
-    color: var(--primary-white-color);
+    color: var(--blog-text-color);
 
     @media screen and(min-width: $tablet) {
       font-size: 38px;
@@ -60,7 +63,7 @@
 
     font-size: 16px;
     line-height: 1.6;
-    color: var(--primary-white-color);
+    color: var(--blog-text-color);
 
     @media screen and (min-width: $tablet) {
       font-size: 18px;
@@ -72,11 +75,18 @@
 
     font-size: 16px;
     line-height: 1.6;
-    color: var(--primary-white-color);
+    color: var(--blog-text-color);
 
     background-color: transparent;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--blog-button-border-color);
     border-radius: 5px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: var(--blog-button-hover-bgc);
+      color: var(--blog-button-hover-text);
+    }
 
     @media screen and (min-width: $tablet) {
       font-size: 18px;

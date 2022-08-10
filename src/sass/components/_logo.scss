@@ -1,6 +1,7 @@
 .logo {
   display: flex;
   align-items: center;
+  transform: scale(1);
   @media screen and (max-width: 767px) {
     padding-top: 22px;
   }
@@ -9,11 +10,16 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+  }
 
   & .logo__icon {
     width: 40px;
     height: 35px;
-    fill: var(--accent-color);
+    fill: var(--logo-icon-color);
   }
   & .logo__title {
     font-size: 32px;
@@ -25,9 +31,9 @@
     }
   }
   & .logo__title-primary {
-    color: var(--accent-color);
+    color: var(--logo-text-primary);
   }
   & .logo__title-secondary {
-    color: var(--primary-white-color);
+    color: var(--logo-text-primary);
   }
 }
